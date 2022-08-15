@@ -32,7 +32,9 @@ catch (Exception e)
 
 var queen = new Queen(x, y, '0');
 
-var board = new Board(boardSizeX, boardSizeY, queen);
+var board = new Board(boardSizeX, boardSizeY);
 
-board.RunSimulation();
-board.DrawBoard();
+var boardService = new BoardService(board, queen);
+
+boardService.RunSimulation();
+boardService.DrawBoard();
